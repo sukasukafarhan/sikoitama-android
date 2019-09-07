@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/nav_item_data"
+        android:checked="true"
+        android:icon="@drawable/ic_home_white_24dp"
+        android:title="Home" />
+<!--    <item-->
+<!--        android:id="@+id/nav_item_history"-->
+<!--        android:checked="true"-->
+<!--        android:icon="@drawable/ic_info_24px"-->
+<!--        android:title="@string/history" />-->
+    <item
+        android:id="@+id/nav_item_watering"
+        android:checked="true"
+        android:icon="@drawable/ic_accessibility_white_24dp"
+        android:title="@string/watering" />
+</menu>
