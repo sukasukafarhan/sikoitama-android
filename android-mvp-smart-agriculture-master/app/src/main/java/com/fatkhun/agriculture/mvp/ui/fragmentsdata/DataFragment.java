@@ -175,8 +175,8 @@ public class DataFragment extends BaseFragment implements DataFragmentMvpView {
 
     @Override
     public void setupDataKoi(DataKoiResponse dataKoiResponse) {
-        List<String> pH = new ArrayList<>();
-        List<String> temperature = new ArrayList<>();
+        List<Float> pH = new ArrayList<>();
+        List<Float> temperature = new ArrayList<>();
 
         temperature.add(dataKoiResponse.getSuhuData().get(0));
         temperature.add(dataKoiResponse.getSuhuData().get(1));
@@ -207,21 +207,21 @@ public class DataFragment extends BaseFragment implements DataFragmentMvpView {
         chartSensor(temperature, pH);
     }
 
-    private void chartSensor(List<String> temperatures, List<String> pHs
+    private void chartSensor(List<Float> temperatures, List<Float> pHs
                             ){
         ValueLineSeries temperature = new ValueLineSeries();
         temperature.setColor(0xFF55C8F0);
 
-        temperature.addPoint(new ValueLinePoint("", 0));
-        temperature.addPoint(new ValueLinePoint("", 1));
-        temperature.addPoint(new ValueLinePoint("", 2));
-        temperature.addPoint(new ValueLinePoint("", 3));
-        temperature.addPoint(new ValueLinePoint("", 4));
-        temperature.addPoint(new ValueLinePoint("", 5));
-        temperature.addPoint(new ValueLinePoint("", 6));
-        temperature.addPoint(new ValueLinePoint("", 7));
-        temperature.addPoint(new ValueLinePoint("", 8));
-        temperature.addPoint(new ValueLinePoint("", 9));
+        temperature.addPoint(new ValueLinePoint("", temperatures.get(0)));
+        temperature.addPoint(new ValueLinePoint("", temperatures.get(1)));
+        temperature.addPoint(new ValueLinePoint("", temperatures.get(2)));
+        temperature.addPoint(new ValueLinePoint("", temperatures.get(3)));
+        temperature.addPoint(new ValueLinePoint("", temperatures.get(4)));
+        temperature.addPoint(new ValueLinePoint("", temperatures.get(5)));
+        temperature.addPoint(new ValueLinePoint("", temperatures.get(6)));
+        temperature.addPoint(new ValueLinePoint("", temperatures.get(7)));
+        temperature.addPoint(new ValueLinePoint("", temperatures.get(8)));
+        temperature.addPoint(new ValueLinePoint("", temperatures.get(9)));
 
         lineChartTemperature.addSeries(temperature);
         lineChartTemperature.startAnimation();
@@ -229,16 +229,16 @@ public class DataFragment extends BaseFragment implements DataFragmentMvpView {
         ValueLineSeries pH = new ValueLineSeries();
         pH.setColor(0xFF78DC96);
 
-        pH.addPoint(new ValueLinePoint("", 0));
-        pH.addPoint(new ValueLinePoint("", 1));
-        pH.addPoint(new ValueLinePoint("", 2));
-        pH.addPoint(new ValueLinePoint("", 3));
-        pH.addPoint(new ValueLinePoint("", 4));
-        pH.addPoint(new ValueLinePoint("", 5));
-        pH.addPoint(new ValueLinePoint("", 6));
-        pH.addPoint(new ValueLinePoint("", 7));
-        pH.addPoint(new ValueLinePoint("", 8));
-        pH.addPoint(new ValueLinePoint("", 9));
+        pH.addPoint(new ValueLinePoint("", pHs.get(0)));
+        pH.addPoint(new ValueLinePoint("", pHs.get(1)));
+        pH.addPoint(new ValueLinePoint("", pHs.get(2)));
+        pH.addPoint(new ValueLinePoint("", pHs.get(3)));
+        pH.addPoint(new ValueLinePoint("", pHs.get(4)));
+        pH.addPoint(new ValueLinePoint("", pHs.get(5)));
+        pH.addPoint(new ValueLinePoint("", pHs.get(6)));
+        pH.addPoint(new ValueLinePoint("", pHs.get(7)));
+        pH.addPoint(new ValueLinePoint("", pHs.get(8)));
+        pH.addPoint(new ValueLinePoint("", pHs.get(9)));
 
         lineChartPh.addSeries(pH);
         lineChartPh.startAnimation();

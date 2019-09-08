@@ -11,13 +11,13 @@ public class DataKoiResponse{
 	private double averageSuhu;
 
 	@SerializedName("pHdata")
-	private List<String> pHdata;
+	private List<Float> pHdata;
 
 	@SerializedName("averagepH")
 	private double averagepH;
 
 	@SerializedName("SuhuData")
-	private List<String> suhuData;
+	private List<Float> suhuData;
 
 	public void setAverageSuhu(double averageSuhu){
 		this.averageSuhu = averageSuhu;
@@ -27,11 +27,11 @@ public class DataKoiResponse{
 		return averageSuhu;
 	}
 
-	public void setPHdata(List<String> pHdata){
+	public void setPHdata(List<Float> pHdata){
 		this.pHdata = pHdata;
 	}
 
-	public List<String> getPHdata(){
+	public List<Float> getPHdata(){
 		return pHdata;
 	}
 
@@ -43,11 +43,11 @@ public class DataKoiResponse{
 		return averagepH;
 	}
 
-	public void setSuhuData(List<String> suhuData){
+	public void setSuhuData(List<Float> suhuData){
 		this.suhuData = suhuData;
 	}
 
-	public List<String> getSuhuData(){
+	public List<Float> getSuhuData(){
 		return suhuData;
 	}
 
